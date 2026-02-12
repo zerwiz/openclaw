@@ -1,6 +1,7 @@
 import type { IconName } from "./icons.js";
 
 export const TAB_GROUPS = [
+  { label: "Get started", tabs: ["setup"] },
   { label: "Chat", tabs: ["chat"] },
   {
     label: "Control",
@@ -11,6 +12,7 @@ export const TAB_GROUPS = [
 ] as const;
 
 export type Tab =
+  | "setup"
   | "agents"
   | "overview"
   | "channels"
@@ -26,6 +28,7 @@ export type Tab =
   | "logs";
 
 const TAB_PATHS: Record<Tab, string> = {
+  setup: "/setup",
   agents: "/agents",
   overview: "/overview",
   channels: "/channels",
@@ -124,6 +127,8 @@ export function inferBasePathFromPathname(pathname: string): string {
 
 export function iconForTab(tab: Tab): IconName {
   switch (tab) {
+    case "setup":
+      return "helpCircle";
     case "agents":
       return "folder";
     case "chat":
@@ -157,6 +162,8 @@ export function iconForTab(tab: Tab): IconName {
 
 export function titleForTab(tab: Tab) {
   switch (tab) {
+    case "setup":
+      return "Setup";
     case "agents":
       return "Agents";
     case "overview":
@@ -190,6 +197,8 @@ export function titleForTab(tab: Tab) {
 
 export function subtitleForTab(tab: Tab) {
   switch (tab) {
+    case "setup":
+      return "How to set up OpenClaw. Prerequisites, install, onboard, and configure.";
     case "agents":
       return "Manage agent workspaces, tools, and identities.";
     case "overview":

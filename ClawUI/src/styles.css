@@ -1,0 +1,6 @@
+/* Reuse Control UI design system for visual parity */
+@import "@openclaw/ui-styles/base.css";
+@import "@openclaw/ui-styles/layout.css";
+@import "@openclaw/ui-styles/layout.mobile.css";
+@import "@openclaw/ui-styles/components.css";
+@import "@openclaw/ui-styles/config.css";

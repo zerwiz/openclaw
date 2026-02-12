@@ -130,6 +130,7 @@
   - changed-files:
       - any-glob-to-any-file:
           - "ui/**"
+          - "ClawUI/**"
           - "src/gateway/control-ui.ts"
           - "src/gateway/control-ui-shared.ts"
           - "src/gateway/protocol/**"

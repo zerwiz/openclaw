@@ -1251,6 +1251,7 @@
               {
                 "group": "Experiments",
                 "pages": [
+                  "planning/UI_PLANNING",
                   "experiments/onboarding-config-protocol",
                   "experiments/plans/cron-add-hardening",
                   "experiments/plans/group-policy-hardening",
